@@ -15,20 +15,33 @@ int main(int argc, char *argv[])
     int width = 1024;
     int height = 768;
 
-    GLFWwindow * window;
-
+    GLFWwindow * window; //Create Window (use glfwGetPrimaryMonitor() for fullscreen)
     window = glfwCreateWindow(width, height, "GLFW", NULL, NULL);
 
-    if(!window){
+    if(!window){ //Check Validity
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
 
-    glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(window); //Make Window Current Context
 
-    cout << "Hello glfw window!" << endl;
+    cout << "GLFW window initialized!" << endl;
 
+    while (!glfwWindowShouldClose(window)) {
+        glViewport(0, 0, width, height); //set Viewport in pixels
+        glClearColor(1, 0, 0, 1);   //Clear window contents
+        glClear(GL_COLOR_BUFFER_BIT);
 
+        //drawing
+
+        glfwSwapBuffers(window); //<--SWAP BUFFERS
+        glfwPollEvents(); //<--LISTEN FOR WINDOW EVENTS
+
+    }
+    //destroy window and terminate glfw
+    glfwDestroyWindow(window);
+    glfwTerminate();
+    cout << "Googbye!" << endl;
 
     return 0;
 }
