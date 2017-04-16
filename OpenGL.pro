@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     Version \
-    GLFWwindow
+    GLFWwindow \
+    Extensions
