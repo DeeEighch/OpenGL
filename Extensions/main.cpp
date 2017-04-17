@@ -27,9 +27,9 @@ int main(int argc, char *argv[])
     glfwMakeContextCurrent(window); //Make Window Current Context
     cout << "GLFW window initialized!" << endl;
 
-    //GLEW must be initialized, if OpenGL context exists
+    //GLEW must be initialized, only if OpenGL context exists
 
-    //glewExperimental = true; //This flag helps prevent errors with modern OpenGL
+    glewExperimental = true; //This flag helps prevent errors with modern OpenGL
     GLenum glewError = glewInit(); //Initialize GLEW
     if(glewError != GLEW_OK){
         cout << "GLEW initialization error" << endl
