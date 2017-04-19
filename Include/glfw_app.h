@@ -10,7 +10,7 @@ struct App{
     Window mWindow;
     Window& window() { return mWindow; }
 
-    App (int width = 640, int height = 480) {
+    App (int width = 640, int height = 480, const char* name = WINDOW_NAME) {
 
         /*---------------------------------------------------------------------------------
          *  Initialize GLFW
@@ -19,7 +19,7 @@ struct App{
 
         cout << "GLFW initialized!" << endl;
 
-        mWindow.create(this, width, height); //<-- Create window, passing this application to it
+        mWindow.create(this, width, height, name); //<-- Create window, passing this application to it
 
         cout << "GLFW window created!" << endl;
 
