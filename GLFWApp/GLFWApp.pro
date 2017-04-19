@@ -6,6 +6,3 @@ CONFIG -= qt
 include(../OpenGL.pri)
 
 SOURCES += main.cpp
-
-HEADERS += \
-    gl_lib.h
