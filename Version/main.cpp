@@ -10,7 +10,7 @@ int main(int argc, char * argv[]){
     GLFWwindow * window;
     if (!glfwInit()) exit(EXIT_FAILURE);
 
-    window = glfwCreateWindow(1024,768,"glfw",NULL,NULL);
+    window = glfwCreateWindow(1024, 768, WINDOW_NAME, NULL, NULL);
 
     if (!window) {
         glfwTerminate();

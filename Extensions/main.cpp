@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     int height = 768;
 
     GLFWwindow * window; //Create Window (use glfwGetPrimaryMonitor() for fullscreen)
-    window = glfwCreateWindow(width, height, "GLFW", NULL, NULL);
+    window = glfwCreateWindow(width, height, WINDOW_NAME, NULL, NULL);
 
     if(!window){ //Check Validity
         glfwTerminate();

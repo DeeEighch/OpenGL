@@ -4,6 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 include(../OpenGL.pri)
-message($${WINDOW_NAME})
 
 SOURCES += main.cpp
+
+HEADERS += \
+    gl_lib.h
