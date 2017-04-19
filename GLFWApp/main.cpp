@@ -28,7 +28,7 @@ struct MyApp : App {
         if(action == GLFW_RELEASE) cout << "mouse released" << endl;
     }
 
-    virtual void onKeyDown(int key, int action) override
+    virtual void onKeyDown(int key, int action)
     {
         cout << (unsigned char)key << endl;
     }
